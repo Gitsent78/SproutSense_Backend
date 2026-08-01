@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SproutSense 🌿</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --clay:#BB5B35;
+      --clay-dark:#8C431F;
+      --sprout:#6FB874;
+      --sprout-dark:#4A8C50;
+      --paper:#F4EFE4;
+      --paper-dim:#E7E0CE;
+      --ink:#1F2E22;
+      --ink-soft:#4C5D4E;
+      --amber:#B9791E;
+      --danger:#A83F2A;
+      --panel-bg:#FFFFFF;
+      --panel-border:rgba(31,46,34,0.10);
+      --field-bg:rgba(31,46,34,0.03);
+      --field-border:rgba(31,46,34,0.14);
+      --page-bg:#EFEAdd;
+    }
+
+    body.dark{
+      --paper:#F4EFE4;
+      --paper-dim:#E7E0CE;
+      --ink:#F4EFE4;
+      --ink-soft:#A9C2AC;
+      --amber:#E0A836;
+      --danger:#D9694E;
+      --panel-bg:#1F3327;
+      --panel-border:rgba(169,194,172,0.16);
+      --field-bg:rgba(244,239,228,0.03);
+      --field-border:rgba(169,194,172,0.22);
+      --page-bg:#16241C;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:var(--page-bg);
+      color:var(--ink);
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:36px 16px 60px;
+      transition:background .25s ease, color .25s ease;
+    }
+
+    .journal{
+      position:relative;
+      width:400px;
+      max-width:100%;
+      background:var(--panel-bg);
+      border:1px solid var(--panel-border);
+      border-radius:18px;
+      padding:28px 26px 26px;
+      box-shadow:0 20px 50px -24px rgba(0,0,0,0.35);
+      transition:background .25s ease, border-color .25s ease;
+    }
+
+    .journal-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .brandmark{display:flex;align-items:center;gap:10px;}
+    .leaf-mark{width:26px;height:26px;flex-shrink:0;}
+
+    .brand-text .eyebrow{
+      font-family:'JetBrains Mono',monospace;
+      font-size:9.5px;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      color:var(--ink-soft);
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .brand-text h1{
+      margin:0;
+      font-family:'Fraunces',serif;
+      font-size:19px;
+      font-weight:500;
+      color:var(--ink);
+    }
+
+    #themeToggle{
+      width:34px;height:34px;border-radius:50%;
+      border:1px solid var(--field-border);
+      background:transparent;color:var(--ink-soft);
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;font-size:15px;
+      transition:border-color .2s ease, color .2s ease;
+    }
+    #themeToggle:hover{border-color:var(--sprout);color:var(--sprout-dark);}
+
+    .dropzone{
+      border:1.5px dashed var(--field-border);
+      border-radius:12px;
+      padding:16px;
+      text-align:center;
+      cursor:pointer;
+      transition:border-color .2s ease, background .2s ease;
+      background:var(--field-bg);
+      display:block;
+    }
+    .dropzone:hover{border-color:var(--sprout);background:rgba(111,184,116,0.07);}
+    .dropzone input{display:none;}
+    .dz-icon{font-size:19px;margin-bottom:6px;}
+    .dz-label{font-size:12.5px;color:var(--ink-soft);}
+    .dz-label b{color:var(--ink);font-weight:600;}
+
+    #preview{
+      display:none;
+      width:64px;height:64px;object-fit:cover;
+      border-radius:8px;
+      border:2px solid var(--paper-dim);
+      margin-top:12px;
+    }
+
+    .btn-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
+
+    button{
+      font-family:'Inter',sans-serif;
+      font-size:13.5px;
+      font-weight:600;
+      cursor:pointer;
+      transition:transform .15s ease, filter .15s ease;
+    }
+    button:hover{transform:translateY(-1px);filter:brightness(1.06);}
+    button:active{transform:translateY(0);}
+
+    .btn{
+      flex:1;
+      padding:11px 14px;
+      border-radius:10px;
+      border:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      white-space:nowrap;
+    }
+    .btn-primary{background:var(--clay);color:#FCEBE3;}
+    .btn-secondary{background:transparent;color:var(--ink-soft);border:1px solid var(--field-border);}
+
+    .field-row{display:flex;gap:14px;margin-top:20px;}
+    .field{flex:1;}
+    .field label{
+      font-family:'JetBrains Mono',monospace;
+      font-size:10px;letter-spacing:0.08em;text-transform:uppercase;
+      color:var(--ink-soft);display:block;margin-bottom:8px;
+    }
+
+    .pot-control{display:flex;align-items:center;gap:10px;}
+
+    input[type="range"]{
+      -webkit-appearance:none;appearance:none;width:100%;height:4px;
+      background:linear-gradient(90deg,var(--sprout),var(--field-border));
+      border-radius:4px;outline:none;flex:1 1 auto;
+    }
+    input[type="range"]::-webkit-slider-thumb{
+      -webkit-appearance:none;width:16px;height:16px;border-radius:50%;
+      background:var(--paper);border:3px solid var(--sprout);cursor:pointer;
+      margin-top:0;
+    }
+    input[type="range"]::-moz-range-thumb{
+      width:16px;height:16px;border-radius:50%;
+      background:var(--paper);border:3px solid var(--sprout);cursor:pointer;
+    }
+
+    #potSizeLabel{
+      font-size:12px;color:var(--ink);margin-top:6px;font-weight:500;
+      display:block;
+    }
+
+    select{
+      width:100%;
+      background:var(--field-bg);
+      border:1px solid var(--field-border);
+      color:var(--ink);
+      font-family:'Inter',sans-serif;
+      font-size:12.5px;
+      padding:8px 10px;
+      border-radius:8px;
+    }
+
+    #loading{
+      display:none;
+      margin-top:16px;
+      text-align:center;
+    }
+    #loadingText{
+      font-family:'JetBrains Mono',monospace;
+      font-size:11.5px;
+      color:var(--ink-soft);
+      margin:0 0 8px;
+    }
+    .bar{
+      width:180px;height:6px;background:var(--field-border);
+      border-radius:6px;overflow:hidden;margin:0 auto;
+    }
+    #barFill{
+      height:100%;width:0%;
+      background:var(--sprout);
+      transition:width .18s ease;
+    }
+
+    .gauge{
+      width:100%;height:10px;background:var(--field-border);
+      border-radius:6px;overflow:hidden;margin-top:20px;
+    }
+    #gaugeFill{
+      height:100%;width:0%;
+      background:var(--sprout);
+      transition:width .3s ease, background .3s ease;
+    }
+    .gauge-label{
+      font-family:'JetBrains Mono',monospace;
+      font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;
+      color:var(--ink-soft);margin-top:8px;
+    }
+
+    #result{
+      margin-top:16px;
+      text-align:left;
+      background:var(--field-bg);
+      border:1px solid var(--panel-border);
+      border-radius:12px;
+      padding:16px;
+    }
+    #result:empty{display:none;}
+    #result h2{
+      font-family:'Fraunces',serif;
+      font-style:italic;
+      font-weight:500;
+      font-size:20px;
+      margin:0 0 10px;
+      color:var(--sprout-dark);
+    }
+    #result p{
+      font-size:13px;
+      line-height:1.7;
+      color:var(--ink-soft);
+      margin:0 0 4px;
+    }
+    #result h3{
+      font-family:'JetBrains Mono',monospace;
+      font-size:13px;
+      color:var(--ink);
+      margin:10px 0 0;
+      font-weight:500;
+    }
+
+    #leafColor{
+      font-family:'JetBrains Mono',monospace;
+      font-size:11px;
+      color:var(--ink-soft);
+      margin:10px 0 0;
+    }
+
+    #dashboard{
+      margin-top:14px;
+      font-size:12px;
+      color:var(--ink-soft);
+      line-height:1.7;
+    }
+
+    .fav-row{
+      margin-top:16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .save-btn{
+      background:transparent;
+      border:1px solid var(--amber);
+      color:var(--amber);
+      font-size:12px;
+      font-weight:600;
+      padding:8px 13px;
+      border-radius:8px;
+    }
+    .save-btn:hover{background:rgba(185,121,30,0.08);}
+    #favorites{font-size:12px;color:var(--ink-soft);text-align:right;}
+    #favorites p{margin:0 0 4px;}
+
+    .history-title{
+      font-family:'JetBrains Mono',monospace;
+      font-size:10px;letter-spacing:0.08em;text-transform:uppercase;
+      color:var(--ink-soft);margin:20px 0 10px;
+    }
+    #history:empty{margin:0;}
+    #history > div{
+      border-left:2px solid var(--sprout);
+      padding:8px 0 8px 12px !important;
+      margin-bottom:6px !important;
+      background:transparent !important;
+      border-radius:0 !important;
+    }
+
+    canvas{display:none;}
+
+    @media (max-width:480px){
+      .journal{padding:22px 18px 20px;}
+      .field-row{flex-direction:column;gap:14px;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="journal">
+
+    <div class="journal-top">
+      <div class="brandmark">
+        <svg class="leaf-mark" viewBox="0 0 26 26" fill="none">
+          <path d="M13 24C13 24 3 19 3 9C3 9 13 4 13 4C13 4 23 9 23 9C23 19 13 24 13 24Z" fill="#6FB874" opacity="0.9"/>
+          <path d="M13 24V6" stroke="#123018" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M13 12L8 9M13 16L7.5 13.5M13 20L8.5 18" stroke="#123018" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+        </svg>
+        <div class="brand-text">
+          <span class="eyebrow">Field journal</span>
+          <h1>SproutSense</h1>
+        </div>
+      </div>
+      <button type="button" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">◐</button>
+    </div>
+
+    <label class="dropzone">
+      <input type="file" id="imageInput" onchange="previewImage()" />
+      <div class="dz-icon">📷</div>
+      <div class="dz-label"><b>Add a photo</b> or drop a leaf here</div>
+      <img id="preview" />
+    </label>
+
+    <div class="btn-row">
+      <button type="button" class="btn btn-primary" onclick="uploadPlant()">Scan plant</button>
+      <button type="button" class="btn btn-secondary" onclick="loadHistory()">History</button>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="potSize">Pot size</label>
+        <div class="pot-control">
+          <input type="range" min="1" max="3" value="2" id="potSize" step="1">
+        </div>
+        <span id="potSizeLabel">Medium</span>
+      </div>
+      <div class="field">
+        <label for="env">Environment</label>
+        <select id="env">
+          <option>Indoor</option>
+          <option>Outdoor</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="loading">
+      <p id="loadingText">🌿 Identifying Plant...</p>
+      <div class="bar"><div id="barFill"></div></div>
+    </div>
+
+    <div class="gauge"><div id="gaugeFill"></div></div>
+    <p class="gauge-label">Water level</p>
+
+    <div id="result"></div>
+
+    <p id="leafColor"></p>
+
+    <div id="dashboard"></div>
+
+    <div class="fav-row">
+      <button type="button" class="save-btn" onclick="saveFavorite()">★ Save</button>
+      <div id="favorites"></div>
+    </div>
+
+    <p class="history-title">Recent entries</p>
+    <div id="history"></div>
+
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
