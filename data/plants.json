@@ -1,0 +1,368 @@
+[
+  {
+    "plant": "Monstera deliciosa",
+    "temperature": 27.53,
+    "humidity": 57,
+    "rainChance": 0,
+    "water": 1,
+    "date": "2026-08-01T06:13:09.478Z"
+  },
+  {
+    "plant": "Monstera deliciosa",
+    "temperature": 27.53,
+    "humidity": 57,
+    "rainChance": 0,
+    "water": 1,
+    "date": "2026-08-01T06:14:11.002Z"
+  },
+  {
+    "plant": "Philodendron hederaceum",
+    "temperature": 27.53,
+    "humidity": 57,
+    "rainChance": 0,
+    "water": 1,
+    "date": "2026-08-01T06:14:23.231Z"
+  },
+  {
+    "plant": "Monstera deliciosa",
+    "temperature": 27.54,
+    "humidity": 56,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T06:27:42.948Z"
+  },
+  {
+    "plant": "Monstera deliciosa",
+    "temperature": 27.67,
+    "humidity": 58,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T06:45:23.440Z"
+  },
+  {
+    "plant": "Monstera deliciosa",
+    "temperature": 27.67,
+    "humidity": 58,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T06:55:23.004Z"
+  },
+  {
+    "plant": "Unknown Plant",
+    "temperature": 27,
+    "humidity": 48,
+    "rainChance": 62,
+    "water": 1,
+    "message": "Rain expected — skip watering today.",
+    "date": "2026-08-01T07:09:19.562Z"
+  },
+  {
+    "plant": "Unknown Plant",
+    "temperature": 31,
+    "humidity": 77,
+    "rainChance": 2,
+    "water": 1.5,
+    "message": "High humidity — reduce watering.",
+    "date": "2026-08-01T07:14:18.556Z"
+  },
+  {
+    "plant": "Unknown Plant",
+    "temperature": 27,
+    "humidity": 66,
+    "rainChance": 30,
+    "water": 1,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:16:15.098Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:24:53.092Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:25:00.727Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 58,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:26:01.714Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 58,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:27:10.409Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:28:18.701Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:30:09.143Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:32:26.817Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.75,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:34:09.711Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:37:44.419Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:03.347Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:11.747Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:14.790Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:29.593Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:32.155Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:34.566Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:37.653Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.14,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:38:39.159Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 27.85,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T07:55:49.877Z"
+  },
+  {
+    "plant": "Dracaena trifasciata",
+    "temperature": 28.17,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:04:33.259Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.17,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:11:28.836Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.17,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:11:36.553Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.17,
+    "humidity": 60,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:11:42.554Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:28:16.775Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:28:28.856Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:29:39.243Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:29:45.270Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:29:56.328Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:32:44.116Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:33:36.742Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:34:03.341Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.37,
+    "humidity": 59,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:36:11.246Z"
+  },
+  {
+    "plant": "Zamioculcas zamiifolia",
+    "temperature": 28.48,
+    "humidity": 57,
+    "rainChance": 43,
+    "water": 0.3,
+    "message": "Water normally today.",
+    "date": "2026-08-01T08:56:58.597Z"
+  }
+]
